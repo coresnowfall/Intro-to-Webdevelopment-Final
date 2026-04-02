@@ -1,3 +1,59 @@
 * {
     box-sizing: border-box;
 }
+
+html {
+    
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+/* Header/Hero image */
+#hero-back {
+    position: static;
+    width: 100%;
+}
+
+/* Based on W3Schools CSS Animation module */
+@keyframes wiggle {
+    0% { width: 100%; filter: blur(1.1px);}
+    25% { width: 102%; filter: blur(1.2px);}
+    50% { width: 100%; filter: blur(0px);}
+    65% { width: 101%; filter: blur(1px);}
+    100% { width: 100%; filter: blur(1.2px);}
+}
+
+#hero-front {
+    position: absolute;
+    width: 100%;
+
+    /* Based on W3Schools CSS Animation module */
+    animation: wiggle 4s ease-in-out infinite;
+}
+
+/* When the car is in focus, this is out of focus */
+@keyframes logo-blur {
+    0% { filter: blur(0px) hue-rotate(343deg) saturate(0.5);}
+    25% { filter: blur(0px) hue-rotate(343deg) saturate(0.5);}
+    50% { filter: blur(1.2px) hue-rotate(343deg) saturate(0.5);}
+    65% { filter: blur(0px) hue-rotate(343deg) saturate(0.5);}
+    100% { filter: blur(0px) hue-rotate(343deg) saturate(0.5);}
+}
+
+#hero-logo {
+    filter: hue-rotate(343deg) saturate(0.5);
+    position: absolute;
+    width: 50%;
+    margin-left: 37%;
+    animation: logo-blur 4s ease-in-out infinite;
+}
+
+/* Navigation */
+
+nav button {
+   border: none;
+   border-radius: 5px;
+}
