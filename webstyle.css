@@ -1,34 +1,133 @@
+/* Main/impacts EVERYTHING. Be careful with these. */
 * {
     box-sizing: border-box;
 }
 
 html {
-    
+    background-color: rgb(43, 26, 26);
 }
 
 body {
+    background-color: white;
     margin: 0;
     width: 100%;
+    height: fit-content;
+}
+
+#page-content {
+    border-top: 5px solid rgb(43, 26, 26);
+    padding: 30px;
+}
+
+/* Change selection colour, from W3Schools */
+*::selection {
+    background: #b34c66;
+    color: #ffffff;
+}
+
+/* Font modifications / text elements */
+button,
+li,
+h1,
+h6,
+a,
+h2,
+h3 {
+    font-family: "Zalando Sans Expanded", sans-serif;
+    font-weight: 600;
+    color: rgb(43, 26, 26);
+}
+
+h3 {
+    color: #b34c66;
+}
+
+hr {
+    color: rgb(43, 26, 26);
+    margin: 20px;
+}
+
+i {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    max-width: 1000px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+    color: rgb(43, 26, 26);
+}
+
+p a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    color: rgb(153, 129, 129);
+}
+
+p a:hover {
+    color: #b34c66;
+}
+
+.header-pop {
+    float: right;
+    max-width: 50%;
+    font-size: 25px;
+    text-align: right;
 }
 
 /* Header/Hero image */
+#main-logo {
+    width: 100%;
+    padding: 0 40% 0 40%;
+}
+
 #hero-back {
-    position: static;
     width: 100%;
 }
 
 /* Based on W3Schools CSS Animation module */
 @keyframes wiggle {
-    0% { width: 100%; filter: blur(1.1px);}
-    25% { width: 102%; filter: blur(1.2px);}
-    50% { width: 100%; filter: blur(0px);}
-    65% { width: 101%; filter: blur(1px);}
-    100% { width: 100%; filter: blur(1.2px);}
+    0% {
+        width: 100%;
+        filter: blur(1.1px);
+    }
+
+    25% {
+        width: 102%;
+        filter: blur(1.2px);
+    }
+
+    50% {
+        width: 100%;
+        filter: blur(0px);
+    }
+
+    65% {
+        width: 101%;
+        filter: blur(1px);
+    }
+
+    100% {
+        width: 100%;
+        filter: blur(1.2px);
+    }
 }
 
 #hero-front {
     position: absolute;
     width: 100%;
+    pointer-events: none;
 
     /* Based on W3Schools CSS Animation module */
     animation: wiggle 4s ease-in-out infinite;
@@ -36,11 +135,25 @@ body {
 
 /* When the car is in focus, this is out of focus */
 @keyframes logo-blur {
-    0% { filter: blur(0px) hue-rotate(343deg) saturate(0.5);}
-    25% { filter: blur(0px) hue-rotate(343deg) saturate(0.5);}
-    50% { filter: blur(1.2px) hue-rotate(343deg) saturate(0.5);}
-    65% { filter: blur(0px) hue-rotate(343deg) saturate(0.5);}
-    100% { filter: blur(0px) hue-rotate(343deg) saturate(0.5);}
+    0% {
+        filter: blur(0px) hue-rotate(343deg) saturate(0.5);
+    }
+
+    25% {
+        filter: blur(0px) hue-rotate(343deg) saturate(0.5);
+    }
+
+    50% {
+        filter: blur(1.2px) hue-rotate(343deg) saturate(0.5);
+    }
+
+    65% {
+        filter: blur(0px) hue-rotate(343deg) saturate(0.5);
+    }
+
+    100% {
+        filter: blur(0px) hue-rotate(343deg) saturate(0.5);
+    }
 }
 
 #hero-logo {
@@ -53,7 +166,135 @@ body {
 
 /* Navigation */
 
+nav {
+    width: 100%;
+}
+
 nav button {
-   border: none;
-   border-radius: 5px;
+    max-width: 50%;
+    display: block;
+    text-shadow: 0px 0 2px rgb(255, 255, 255),
+        0 0 2px rgb(255, 255, 255),
+        0 0 2px rgb(255, 255, 255),
+        0 0 2px rgb(255, 255, 255),
+        0 0 2px rgb(255, 255, 255);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: none;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    margin: 15px;
+    font-size: 15px;
+    border: none;
+    border-left: 5px solid black;
+    text-align: center;
+    font-weight: 700;
+}
+
+nav button:hover {
+    background-image: url("images/s2k.png"),
+        linear-gradient(to right, rgb(192, 171, 171), white);
+}
+
+nav h6 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    background-color: rgb(43, 26, 26);
+    background-image: linear-gradient(to right, rgb(44, 18, 18), rgba(44, 18, 18, 0.881), rgba(149, 113, 113, 0.881)),
+        url("images/footer.jpg");
+    background-position: center;
+}
+
+footer nav {
+    padding: 20px;
+}
+
+footer nav button {
+    padding: 3px;
+    border: none;
+    text-shadow: none;
+    margin: 0;
+    background: none;
+}
+
+footer nav button a,
+footer h6,
+footer h1,
+footer p {
+    color: white;
+    margin: 0;
+}
+
+footer h1 {
+    opacity: 0.6;
+}
+
+footer h6 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px;
+    font-style: italic;
+    padding: 8px;
+}
+
+footer p {
+    float: right;
+    padding-top: 30px;
+    padding-right: 20px;
+    width: 100%;
+    text-align: right;
+}
+
+footer nav button:hover {
+    background: none;
+}
+
+footer nav button a:hover {
+    color: rgb(153, 129, 129);
+}
+
+/* General inline elements */
+.icon {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+}
+
+.image-right {
+    margin-top: -60px;
+    float: right;
+    width: 150px;
+    height: auto;
+}
+
+.car-feature {
+    display: inline-block;
+    background-position: center;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.car-feature article {
+    border-radius: 25px;
+    border: 2px solid white;
+    padding: 15px;
+    backdrop-filter: blur(5px) brightness(0.5);
+    text-align: right;
+    float: right;
+    max-width: 70%;
+}
+
+.car-feature article h2 {
+    color: white;
+}
+
+.car-feature article p {
+    color: white;
 }
