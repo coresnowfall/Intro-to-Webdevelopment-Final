@@ -15,6 +15,7 @@ body {
 }
 
 #page-content {
+    min-height: 600px;
     border-top: 5px solid rgb(43, 26, 26);
     padding: 30px;
 }
@@ -32,10 +33,19 @@ h1,
 h6,
 a,
 h2,
-h3 {
+h3,
+figure {
     font-family: "Zalando Sans Expanded", sans-serif;
     font-weight: 600;
     color: rgb(43, 26, 26);
+}
+
+a li {
+    color:#b34c66;
+}
+
+a li:hover {
+    color: rgb(44, 18, 18)
 }
 
 h3 {
@@ -276,6 +286,7 @@ footer nav button a:hover {
 
 .car-feature {
     display: inline-block;
+    background-size: cover;
     background-position: center;
     border-radius: 25px;
     padding: 20px;
@@ -297,4 +308,15 @@ footer nav button a:hover {
 
 .car-feature article p {
     color: white;
+}
+
+.article-image {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* For images */
+figure {
+    color: rgb(125, 87, 87);
+    font-size: 14px;
 }
