@@ -41,7 +41,7 @@ figure {
 }
 
 a li {
-    color:#b34c66;
+    color: #b34c66;
 }
 
 a li:hover {
@@ -65,6 +65,10 @@ i {
 
 a {
     text-decoration: none;
+}
+
+a:visited {
+    color: rgba(129, 46, 102, 0.881);
 }
 
 p {
